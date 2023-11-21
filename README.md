@@ -8,7 +8,7 @@ In this app, the user is able to:
   - search for a recipe according to name or ingredient 
   - view a bar, pie or line graph related to what recipe name or ingredient has been search
 
-  ![Alt text](src/media/readme_picture.png)
+  ![Alt text](media/readme_picture.png)
 
  # Build with:
  - HTML
