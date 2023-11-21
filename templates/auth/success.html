@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+   
+   <head> 
+      <title>Cook with Us!</title>
+      {% load static %}
+      <style type="text/css">
+         body {
+            background: url("{% static 'recipes/images/homepage.jpg' %}") no-repeat fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 60px;
+            }
+      </style>
+   </head>
+   
+   <body>
+    <h1 style="text-align:center">You've successfully logged out!</h1>
+    <h3 style="text-align:center" ><a href ="{%url 'login' %}" > Log back in </a></h3>
+   </body>
+</html>
+
+

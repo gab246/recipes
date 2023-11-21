@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+   
+   <head> 
+      <title>Cook with Us!</title>
+      {% load static %}
+      <style type="text/css">
+         body {
+            background: url("{% static 'recipes/images/homepage.jpg' %}") no-repeat fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 60px;
+         }
+         table td {
+            background-color: #fffff0;
+            border: none;
+         }
+         h1 {
+            font-size: 100px;
+            color: rgb(220, 216, 152);
+         }
+         a {
+            text-decoration: none;
+            color: black;
+         }
+        </style>
+   </head>
+   
+   <body>
+    <h1 style="text-align:center">RECIPES</h1>
+    <h3 style="text-align:center" ><a href ="{%url 'logout' %}" > Logout </a></h3>
+    <h3 style="text-align:center" ><a href ="{%url 'search' %}" > Search for a Recipe </a></h3>
+   
+    <table border="0" cellpadding="12" cellspacing = "12">   
+       {% for object in object_list %} 
+       <tr>
+         <td style="width: 50%">
+            <a href="{{object.get_absolute_url}}"> {{object.name}}</a></td>
+         <td style="width: 50%">
+            <img src="{{object.pic.url}}" width="150" height="200" /></td>   
+       </tr>
+       {% endfor %}
+    </table>
+
+
+   </body>
+</html>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+   <head>
+      <title>Cook with Us!</title>
+      <h1> Search for a Recipe or Ingredient </h1>
+      <h4><a href ="{%url 'recipes:list' %}" > Back to Recipes</a></h4>
+      <hr>
+      <style type="text/css">
+         body {
+           background-color: rgb(253, 252, 225);
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 60px;
+         }
+      </style>
+   </head>
+
+   <body>
+      <form action="" method="POST">
+      {% csrf_token %}
+      {{form}}
+      <button type="submit" >search</button>
+      </form> 
+      <br>
+
+      {% if objects %}
+      <table border="1" cellpadding="5" cellspacing = "5">   
+      <tr> 
+         <td>Recipes</td>   
+      </tr>
+         {% for object in objects %} 
+      <tr>
+         <td><a href="{{object.get_absolute_url}}"> {{object.name}}</a></td>
+         <td><img src="{{object.pic.url}}" width="150" height="200" /></td>   
+         <td>Ingredients: {{object.ingredients}}</td>
+         <td>Cooking time: {{object.cooking_time}} minutes </td>
+      </tr>
+         {% endfor %}
+      </table>
+      <br>
+         <img src="data:image/jpg;base64, {{chart|safe}}">
+         {% else %}
+         <h3> no data</h3>
+         {% endif %}
+   </body>
+
+
+</html>
