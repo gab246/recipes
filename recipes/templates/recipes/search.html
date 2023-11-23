@@ -35,7 +35,7 @@
          {% for object in objects %} 
       <tr>
          <td><a href="{{object.get_absolute_url}}"> {{object.name}}</a></td>
-         <td><img src="{{object.pic.url}}" width="150" height="200" /></td>   
+         <td><img src="{{object.pic}}" width="150" height="200" /></td>   
          <td>Ingredients: {{object.ingredients}}</td>
          <td>Cooking time: {{object.cooking_time}} minutes </td>
       </tr>
