@@ -24,7 +24,7 @@ import os
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-v7awa$*p*63-lezl3s-1f@hh$pswogzm8*vtte@^qstd9=htdf')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['calm-wildwood-92057-b3369e970ef8.herokuapp.com']
 
