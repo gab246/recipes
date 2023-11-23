@@ -2,7 +2,7 @@ from django.db import models
 from django.shortcuts import reverse
 
 class Recipes(models.Model):
-  pic = models.ImageField(upload_to='recipes', default='no_picture.jpg')
+  pic = models.CharField(max_length = 500)
   name = models.CharField(max_length = 80)
   description = models.TextField(default='')
   cooking_time = models.IntegerField()
