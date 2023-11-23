@@ -18,4 +18,5 @@ In this app, the user is able to:
 
  # More information
  - login with 'username' and 'recipes123' as password
- - project link: 
+ - project link: https://calm-wildwood-92057-b3369e970ef8.herokuapp.com/
+ 
